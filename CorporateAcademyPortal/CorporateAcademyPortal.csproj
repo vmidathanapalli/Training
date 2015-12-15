@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FE79EA9-DC55-4C23-8314-0877F785E2B7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CorporateAcademyPortal</RootNamespace>
+    <AssemblyName>CorporateAcademyPortal</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>C:\Users\ncheguri\Documents\Visual Studio 2012\Projects\WebApplication2\WebApplication2\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DataCalendar">
+      <HintPath>C:\Users\ncheguri\Documents\Bluetooth Folder\Scheduling\Scheduleing project\bin\DataCalendar.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CorporateAcademyPortalAddNewEvent.aspx" />
+    <Content Include="CorporateAcademyPortalAdminLogin.aspx" />
+    <Content Include="CorporateAcademyPortalCalendar.aspx" />
+    <Content Include="CorporateAcademyPortalHomePage.aspx" />
+    <Content Include="CorporateAcademyPortalSchedule.aspx" />
+    <Content Include="CorporateAcademyPortalTopicDetails.ascx" />
+    <Content Include="CSS\BatchSchedule.css" />
+    <Content Include="CSS\MasterPageStyle.css" />
+    <Content Include="images\back-button.jpg" />
+    <Content Include="images\Cancel.jpg" />
+    <Content Include="images\edit.png" />
+    <Content Include="images\Log-Out.jpg" />
+    <Content Include="images\LOGO.PNG" />
+    <Content Include="images\notification.gif" />
+    <Content Include="Javascripts\BatchSchedule.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Corporate Academy Portal.Master.cs">
+      <DependentUpon>Corporate Academy Portal.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Corporate Academy Portal.Master.designer.cs">
+      <DependentUpon>Corporate Academy Portal.Master</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalAddNewEvent.aspx.cs">
+      <DependentUpon>CorporateAcademyPortalAddNewEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalAddNewEvent.aspx.designer.cs">
+      <DependentUpon>CorporateAcademyPortalAddNewEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalAdminLogin.aspx.cs">
+      <DependentUpon>CorporateAcademyPortalAdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalAdminLogin.aspx.designer.cs">
+      <DependentUpon>CorporateAcademyPortalAdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalCalendar.aspx.cs">
+      <DependentUpon>CorporateAcademyPortalCalendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalCalendar.aspx.designer.cs">
+      <DependentUpon>CorporateAcademyPortalCalendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalHomePage.aspx.cs">
+      <DependentUpon>CorporateAcademyPortalHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalHomePage.aspx.designer.cs">
+      <DependentUpon>CorporateAcademyPortalHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalSchedule.aspx.cs">
+      <DependentUpon>CorporateAcademyPortalSchedule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalSchedule.aspx.designer.cs">
+      <DependentUpon>CorporateAcademyPortalSchedule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalTopicDetails.ascx.cs">
+      <DependentUpon>CorporateAcademyPortalTopicDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CorporateAcademyPortalTopicDetails.ascx.designer.cs">
+      <DependentUpon>CorporateAcademyPortalTopicDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Corporate Academy Portal.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CorporateAcademyPortalScheduleBusinessLogic\CorporateAcademyPortalScheduleBusinessLogic.csproj">
+      <Project>{b130f56d-6418-4950-a8b6-b254ef95ddca}</Project>
+      <Name>CorporateAcademyPortalScheduleBusinessLogic %28CorporateAcademyPortalScheduleBusinessLogic\CorporateAcademyPortalScheduleBusinessLogic%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CorporateAcademyPortalScheduleBusinessObject\CorporateAcademyPortalScheduleBusinessObject.csproj">
+      <Project>{1a59fc87-8001-43f1-85ff-fa63537e6376}</Project>
+      <Name>CorporateAcademyPortalScheduleBusinessObject %28CorporateAcademyPortalScheduleBusinessObject\CorporateAcademyPortalScheduleBusinessObject%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CorporateAcademyPortalScheduleData\CorporateAcademyPortalScheduleData.csproj">
+      <Project>{c564f500-3d99-4a91-aa60-1ab943d14a06}</Project>
+      <Name>CorporateAcademyPortalScheduleData %28CorporateAcademyPortalScheduleData\CorporateAcademyPortalScheduleData%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49498/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

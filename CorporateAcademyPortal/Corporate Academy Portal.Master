@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Corporate Academy Portal.master.cs" Inherits="BatchSchedule.Corporate_Academy_Portal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title></title>
+<asp:ContentPlaceHolder id="head" runat="server">
+</asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="/CSS/MasterPageStyle.css"/>
+</head>
+<body style="background-color: #D7D7D7">
+<form id="form1" runat="server">
+<div style="background-color: #D7D7D7">
+    <div id="header">
+        <div id="logo" style="float:left; height: 78px; width: 167px;">
+        <asp:ImageButton ID="imgbtnLogo" runat="server" Height="74px" ImageUrl="~/Images/LOGO.PNG" PostBackUrl="~/CorporateAcademyPortalHomePage.aspx" ToolTip="CORPORATE ACADEMY PORTAL" Width="159px" />
+        </div>
+        <header><H1>CORPORATE ACADEMY PORTAL</H1></header>
+        
+    </div>
+    
+        
+
+
+             <asp:SiteMapDataSource ID="SiteMapDataSource2" runat="server" ShowStartingNode="false" />
+            <div id="nav">
+<asp:Menu ID="menu" runat="server" DataSourceID="SiteMapDataSource2" Orientation="Vertical">
+<LevelMenuItemStyles>
+<asp:MenuItemStyle CssClass="parent_menu" />
+</LevelMenuItemStyles>
+<LevelSelectedStyles>
+<asp:MenuItemStyle CssClass="child_menu" />
+</LevelSelectedStyles>
+<DynamicMenuItemStyle CssClass="sub_menu" />
+<DynamicHoverStyle CssClass="hover_menu" />
+<StaticSelectedStyle CssClass="selected_menu" />
+<StaticHoverStyle CssClass="hover_menu" />
+</asp:Menu>
+            </div>
+       
+    <br />
+    <br />
+<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </p>
+</asp:ContentPlaceHolder>
+</div>
+    <div id="footer">
+Copyright © Corporate Academy Portal
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CorporateAcademyPortalDB" Class="CorporateAcademyPortalDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HYD-ENRICH21;Initial Catalog=CorporateAcademyPortalDB;Persist Security Info=True;User ID=sa" SettingsObjectName="CorporateAcademyPortalScheduleData.Properties.Settings" SettingsPropertyName="CorporateAcademyPortalDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Batch" Member="Batches">
+    <Type Name="Batch">
+      <Column Name="BatchId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BatchName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Batch_NewEvent" Member="NewEvents" ThisKey="BatchId" OtherKey="BatchId" Type="NewEvent" />
+      <Association Name="Batch_EmployeeBatch" Member="EmployeeBatches" ThisKey="BatchId" OtherKey="BatchId" Type="EmployeeBatch" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NewEvent" Member="NewEvents">
+    <Type Name="NewEvent">
+      <Column Name="EventId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BatchId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Date" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Topic" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Trainer" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TheoryHours" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PracticalHours" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Batch_NewEvent" Member="Batch" ThisKey="BatchId" OtherKey="BatchId" Type="Batch" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeData" Member="EmployeeDatas">
+    <Type Name="EmployeeData">
+      <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="EmployeeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DOJ" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Competency" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Designation" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="EmployeeData_EmployeeBatch" Member="EmployeeBatch" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="EmployeeBatch" Cardinality="One" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EmployeeBatch" Member="EmployeeBatches">
+    <Type Name="EmployeeBatch">
+      <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BatchId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Batch_EmployeeBatch" Member="Batch" ThisKey="BatchId" OtherKey="BatchId" Type="Batch" IsForeignKey="true" />
+      <Association Name="EmployeeData_EmployeeBatch" Member="EmployeeData" ThisKey="EmployeeId" OtherKey="EmployeeId" Type="EmployeeData" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

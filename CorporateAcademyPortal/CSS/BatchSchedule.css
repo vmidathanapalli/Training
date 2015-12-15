@@ -1,0 +1,57 @@
+﻿/*Styles for BatchSchedule Module*/
+#auto-style0 {
+    width: 84px;
+}
+ .Popup
+        {
+           background-color:gray; 
+            padding-top: 10px;
+            padding-left: 10px;
+            width: 400px;
+            height: 400px;
+        }
+
+    #tblName {
+        height: 179px;
+        width: 360px;
+    }
+.ForeColor {
+    text-decoration-color:black;
+    color:black;
+    
+}
+
+.auto-style1 {
+    height: 26px;
+    width: 62px;
+}
+
+.auto-style2 {
+    height: 32px;
+}
+
+.auto-style3 {
+    height: 26px;
+    width: 249px;
+}
+
+.auto-style4 {
+    width: 249px;
+}
+
+.auto-style5 {
+    width: 342px;
+    height: 296px;
+}
+
+.auto-style6 {
+    width: 62px;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
