@@ -1,0 +1,34 @@
+Hi Vamshi, welcome to git.
+
+Git is a source control system used for managing the source code provided by clients.
+
+Source control system's are two kinds(CENTRALISED & DISTRIBUTED).
+
+Git is a DISTRIBUTED SOURCE CONTROL system, which means it can be managed and accessed from anywhere any time.
+
+
+Git folder structure:
+
+master
+branch
+tag
+
+
+Frequently used Git commands:
+
+git clone ---> Used to download a complete repository files.
+
+git checkout ---> To switch between the branches.
+
+git pull ---> To update the locally downloaded repository files with the server files.
+
+git commit ---> To save the file into server, we should commit the file locally and push them into the server.
+
+git push ---> To upload the locally committed file/files, into the server.
+
+git log ---> To check the last updated details.
+
+git status ---> To verify the current state of the repository.
+
+
+Thank you....
