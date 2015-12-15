@@ -30,5 +30,7 @@ git log ---> To check the last updated details.
 
 git status ---> To verify the current state of the repository.
 
+git gc ---> To clean the repository unversioned files and there references.
+
 
 Thank you....
